@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title">Algorithm Visualizer</h1>
+            <div class="nav-info">
+                <span id="status">Ready to sort</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Control Panel -->
+    <div class="controls">
+        <div class="control-group">
+            <label for="algorithm-select">Algorithm:</label>
+            <select id="algorithm-select">
+                <option value="bubble">Bubble Sort</option>
+                <option value="selection">Selection Sort</option>
+                <option value="insertion">Insertion Sort</option>
+                <option value="merge">Merge Sort</option>
+                <option value="quick">Quick Sort</option>
+            </select>
+        </div>
+
+        <div class="control-group">
+            <label for="array-size">Array Size: <span id="size-value">50</span></label>
+            <input type="range" id="array-size" min="10" max="100" value="50">
+        </div>
+
+        <div class="control-group">
+            <label for="speed-control">Speed: <span id="speed-value">Medium</span></label>
+            <input type="range" id="speed-control" min="1" max="5" value="3">
+        </div>
+
+        <div class="control-buttons">
+            <button id="generate-array" class="btn btn-secondary">Generate New Array</button>
+            <button id="start-sort" class="btn btn-primary">Start Sorting</button>
+        </div>
+    </div>
+
+    <!-- Visualization Area -->
+    <div class="visualization-container">
+        <div id="array-container" class="array-container">
+            <!-- Array bars will be generated here -->
+        </div>
+    </div>
+
+    <!-- Algorithm Information -->
+    <div class="info-panel">
+        <div class="algorithm-info">
+            <h3 id="algo-name">Bubble Sort</h3>
+            <p id="algo-description">Bubble Sort repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order.</p>
+            <div class="complexity-info">
+                <span class="complexity">Time: <span id="time-complexity">O(n²)</span></span>
+                <span class="complexity">Space: <span id="space-complexity">O(1)</span></span>
+            </div>
+        </div>
+        
+        <div class="legend">
+            <h4>Legend:</h4>
+            <div class="legend-item">
+                <div class="legend-color default"></div>
+                <span>Unsorted</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color comparing"></div>
+                <span>Comparing</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color swapping"></div>
+                <span>Swapping</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color sorted"></div>
+                <span>Sorted</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
