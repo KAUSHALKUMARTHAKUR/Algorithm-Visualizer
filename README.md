@@ -9,7 +9,6 @@ Built with **HTML**, **CSS**, and **JavaScript** — deployable directly on **Gi
 ## 📸 Screenshot
 ![Algorithm Visualizer Screenshot](<img width="1888" height="830" alt="image" src="https://github.com/user-attachments/assets/6f9369e9-f265-4e0c-8891-fa1014fd8be2" />)!
   
-*(Replace `screenshot.png` with an actual screenshot of your app in the repo)*
 
 ## 🛠 Features
 - Visualizes **Bubble Sort**, **Selection Sort**, **Insertion Sort**, **Merge Sort**, and **Quick Sort**.
